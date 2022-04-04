@@ -1,0 +1,173 @@
+#include<stdio.h>
+#include<math.h>
+void arithmetic();
+void conversion();
+void main()
+{
+    int m;
+    printf("1.Arithmetic operation\n");
+    printf("2.Conversion operation\n");
+    printf("Enter the type of operation:");
+    scanf("%d",&m);
+    if(m==1)
+    {
+        arithmetic();
+    }
+    else if(m==2)
+    {
+        conversion();
+    }
+    else
+    {
+        printf("Enter the correct operation");
+    }
+}
+void arithmetic()
+{
+    int n1,n2,option;
+    float n3;
+    printf("1:Addition\n");
+    printf("2:Subtraction\n"); 
+    printf("3:Multiplication\n"); 
+    printf("4:Division\n");
+    printf("Enter the type of arithmetic operation: ");
+    scanf("%d",&option);
+    printf("Enter the value: ");
+    scanf("%d%d",&n1,&n2);
+    switch(option)
+    {
+        case (1):
+           n3=n1+n2;
+           printf("%f Addition of given numbers=",n3);
+           break;
+        case (2):
+           n3=n1-n2;
+           printf("%f Subtraction of given numbers=",n3);
+           break;
+        case (3):
+           n3=n1*n2;
+           printf("%f Multiplication of given numbers=",n3);
+           break;
+        case (4):
+           n3=n1/n2;
+           printf("%f Division of given numbers=",n3);
+           break;
+        default:
+           printf("Your choice is wrong");
+    }
+}
+void conversion()
+{
+    int option;
+    float a,b;
+    printf("1:inch to cm\n"); 
+    printf("2:cm to inch\n"); 
+    printf("3:feet to metre\n"); 
+    printf("4:metre to feet\n");
+    printf("5:mile to kilometre\n"); 
+    printf("6:kilometre to mile\n"); 
+    printf("7:km/hr to m/s\n"); 
+    printf("8:m/s to km/hr\n"); 
+    printf("9:F to C\n"); 
+    printf("10:C to F\n"); 
+    printf("11:J to cal\n"); 
+    printf("12:cal to J\n"); 
+    printf("13:yard to metre\n"); 
+    printf("14:metre to yard\n");
+    printf("15:acre to metresquare\n");
+    printf("16:metresquare to acre\n");
+    printf("17:pound to kilogram\n");
+    printf("18:kilogram to pound\n");
+    printf("19:atmosphere to pascal\n");
+    printf("20:pascal to atmosphere\n");
+    printf("Enter the type of conversion: ");
+    scanf("%d",&option);
+    printf("Enter the value: ");
+    scanf("%f",&a);
+    switch(option)
+    {
+        case (1):
+           b=a*2.54;
+           printf("%f inch is equal to %f cm",a,b);
+           break;
+        case (2):
+           b=a/2.54;
+           printf("%f cm is equal to %f inch",a,b);
+           break;
+        case (3):
+           b=a*0.3048;
+           printf("%f feet is equal to %f metre",a,b);
+           break;
+        case (4):
+           b=a/0.3048;
+           printf("%f metre is equal to %f feet",a,b);
+           break;
+        case (5):
+           b=a/1.6;
+           printf("%f mile is equal to %f kilometre",a,b);
+           break;
+        case (6):
+           b=a*1.6;
+           printf("%f kilometre is equal to %f mile",a,b);
+           break;
+        case (7):
+           b=a*5/18;
+           printf("%f km/hr is equal to %f m/s",a,b);
+           break;
+        case (8):
+           b=a*18/5;
+           printf("%f m/s is equal to %f km/hr",a,b);
+           break;
+        case (9):
+           b=(a*(9/5))+32;
+           printf("%f fahrenheit is equal to %f celsius",a,b);
+           break;
+        case (10):
+           b=(a-32)*(5/9);
+           printf("%f celsius is equal to %f fahrenheit",a,b);
+           break;
+        case (11):
+           b=a*4.184;
+           printf("%f joule is equal to %f calories",a,b);
+           break;
+        case (12):
+           b=a/4.184;
+           printf("%f calories is equal to %f joule",a,b);
+           break;
+        case (13):
+           b=a*0.9144;
+           printf("%f yard is equal to %f metre",a,b);
+           break;
+        case (14):
+           b=a/0.9144;
+           printf("%f metre is equal to %f yard",a,b);
+           break;
+        case (15):
+           b=a*4046.86;
+           printf("%f acre is equal to %f squaremetre",a,b);
+           break;
+        case (16):
+           b=a/4046.86;
+           printf("%f squaremetre is equal to %f acre",a,b);
+           break;
+        case (17):
+           b=a*0.453592;
+           printf("%f pound is equal to %f kilogram",a,b);
+           break;
+        case (18):
+           b=a/0.453592;
+           printf("%f kilogram is equal to %f pound",a,b);
+           break;
+        case (19):
+           b=a*101325;
+           printf("%f atmosphere is equal to %f pascal",a,b);
+           break;
+        case (20):
+           b=a*9.8692*pow(10,-6);
+           printf("%f pascal is equal to %f atmosphere",a,b);
+           break;
+        default:
+            printf("Error! the operation is invalid");
+    }
+    
+}
